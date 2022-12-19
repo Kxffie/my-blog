@@ -19,7 +19,15 @@ const Post = (props) => {
 			</Head>
 			<GoBackButton />
 
-			<h1 className="py-4 mb-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">{props.post.data.title}</h1>
+			<p className="pb-4 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">{props.post.data.title}</p>
+			<div className='flex justify-between'>
+				<p className="text-gray-500">{props.post.data.date} • {props.post.data.readTime}</p>
+				<p className="text-gray-500">
+					{props.post.data.tags.map((tag) => (
+						<span key={tag} className="px-2 py-1 mr-2 text-sm font-medium leading-5 text-gray-800 bg-gray-200 rounded-full">{tag}</span>
+					))}
+				</p>
+			</div>
 			<div className="text-gray-700" dangerouslySetInnerHTML={{ __html: marked(props.post.content) }} />
 		</div>
 	);

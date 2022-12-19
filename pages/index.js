@@ -43,7 +43,7 @@ const Index = (props) => {
     return (
       <div>
         <Head>
-          <title>AIDevBlog</title>
+          <title>AIDevBlog - Page {page}</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta content="AIDevBlog" property="og:title" />
           <meta content="Our blog covers the latest trends and developments in coding and AI. From programming languages to machine learning, we share insights and experiences on a wide range of topics. Whether you're a seasoned developer or just starting out, we hope you'll find our blog a valuable resource." property="og:description" />
@@ -71,7 +71,7 @@ const Index = (props) => {
                 </span>
               </div>
               <div className="mt-3">
-                <Link rel="noopener noreferrer" href="/[slug]" as={`/${post.slug}`} className="text-2xl font-bold transition duration-200 bg-black bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500">{post.data.title}</Link>
+                <Link rel="noopener noreferrer" href="/[slug]" as={`/${post.slug}`} className="text-2xl font-bold transition duration-200 ease-in-out bg-black bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500">{post.data.title}</Link>
                 <p className="mt-2 overflow-hidden line-clamp-3">{post.data.desc}</p>
               </div>
             </div>
