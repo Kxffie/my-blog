@@ -1,3 +1,5 @@
+NEW RESPOSITORY, old one had old name
+
 # AI-Generated Articles
 
 Welcome to our website featuring AI-generated articles on a variety of topics! Our articles are created using advanced natural language processing techniques, allowing us to generate unique and engaging content.
