@@ -7,7 +7,7 @@ import GoBackButton from '../components/GoBack';
 
 const Post = (props) => {
 	return (
-		<div className="max-w-3xl p-4 mx-auto mb-4 text-2xl font-bold prose text-gray-800 lg:prose-xl">
+		<div className="max-w-3xl py-4 mx-auto font-bold prose text-gray-800 md:prose-lg">
 			<Head>
 				<title>AIDevBlog - {props.post.data.title}</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -19,7 +19,7 @@ const Post = (props) => {
 			</Head>
 			<GoBackButton />
 
-			<p className="pb-4 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">{props.post.data.title}</p>
+			<p className="p-8 text-6xl font-bold text-center text-white rounded-3xl bg-gradient-to-r from-pink-500 to-violet-500">{props.post.data.title}</p>
 			<div className='flex justify-between'>
 				<p className="text-gray-500">{props.post.data.date} • {props.post.data.readTime}</p>
 				<p className="text-gray-500">

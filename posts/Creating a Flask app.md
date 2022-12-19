@@ -1,5 +1,5 @@
 ---
-title: "Creating a Flask App: A step-by-step guide"
+title: "Creating a Flask App"
 desc: "This article provides a step-by-step guide on how to create a simple Flask application using Python. It explains how to install Flask, create a new Python file, import Flask, create a Flask instance, define a route, and run the app. It also provides instructions on how to visit the app in a web browser to view the message or other output. This article is intended to help beginners understand the basic process of creating a Flask app and can be used as a reference for building more complex applications."
 date: "12/16/2022"
 readTime: "5-10 Min"

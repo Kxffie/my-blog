@@ -1,5 +1,5 @@
 ---
-title: "Creating an Angular app: A step-by-step guide"
+title: "Creating an Angular app"
 desc: "This article provides a step-by-step guide on creating an Angular app, a front-end web framework for building single-page applications. It covers the benefits of Angular, installation instructions, and an example of building a TODO app using Angular components."
 date: "12/18/2022"
 readTime: "3-5 Min"

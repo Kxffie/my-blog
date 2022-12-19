@@ -1,5 +1,5 @@
 ---
-title: "Creating an EmberJS App: A step-by-step guide"
+title: "Creating an EmberJS App"
 desc: "EmberJS is an open source JavaScript framework used to create ambitious web applications. It is built on the principles of productivity and stability, making it a great choice for web developers. This tutorial will provide an introduction to EmberJS and detail how to make an EmberJS app, as well as provide an example EmberJS app."
 date: "12/19/2022"
 readTime: "5-10 Min"

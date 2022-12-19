@@ -1,5 +1,5 @@
 ---
-title: "Creating a VueJS app: A step-by-step guide"
+title: "Creating a VueJS app"
 desc: "VueJS is an open source JavaScript framework used to create user interfaces and single-page applications. It is designed with a focus on simplicity, performance, and scalability, making it a great choice for web developers. This tutorial will provide an introduction to VueJS and detail how to make a VueJS app, as well as provide an example VueJS app."
 date: "12/19/2022"
 readTime: "3-5 Min"

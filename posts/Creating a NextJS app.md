@@ -1,5 +1,5 @@
 ---
-title: "Creating a NextJS app: A step-by-step guide"
+title: "Creating a NextJS app"
 desc: "This article is a tutorial that guides readers through the process of creating a basic NextJS app from scratch. It covers the prerequisites for setting up a NextJS app, as well as the steps for creating a new app and starting the development server. The article also provides tips for working with NextJS and creating additional pages in the app. The tutorial is suitable for developers who are new to NextJS or web development in general."
 date: "12/16/2022"
 readTime: "3-4 Min"
