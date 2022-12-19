@@ -19,7 +19,7 @@ const Post = (props) => {
 			</Head>
 			<GoBackButton />
 
-			<h1 className="mb-4 text-4xl font-bold text-gray-800">{props.post.data.title}</h1>
+			<h1 className="py-4 mb-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">{props.post.data.title}</h1>
 			<div className="text-gray-700" dangerouslySetInnerHTML={{ __html: marked(props.post.content) }} />
 		</div>
 	);

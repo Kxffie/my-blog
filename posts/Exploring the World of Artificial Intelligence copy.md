@@ -1,7 +1,7 @@
 ---
 title: "Exploring the World of Artificial Intelligence"
 desc: "Learn about the history and current state of artificial intelligence (AI) in this article. We will explore AIs applications in various industries and its ethical considerations. From machine learning to natural language processing, discover the technologies that make up the field of AI and how they are solving real-world problems."
-date: "12/16/2022"
+date: "12/15/2022"
 readTime: "2-3 Min"
 tags:
   - "article"

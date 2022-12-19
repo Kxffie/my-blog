@@ -54,9 +54,9 @@ const Index = (props) => {
         </Head>
         <h1 className='px-2 py-1 my-2 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500'>
           {currentPagePosts.length} Results •
-          <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value)} className='bg-violet-500 active:border-none focus:outline-none'>
-            <option value="asc">Oldest to Newest</option>
-            <option value="desc">Newest to Oldest</option>
+          <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value)} className='bg-violet-500 active:border-none focus:outline-none hover:cursor-pointer'>
+            <option value="asc" className='hover:cursor-pointer'>Oldest to Newest</option>
+            <option value="desc" className='hover:cursor-pointer'>Newest to Oldest</option>
           </select>
         </h1>
         {currentPagePosts.map((post) => (
@@ -71,7 +71,7 @@ const Index = (props) => {
                 </span>
               </div>
               <div className="mt-3">
-                <Link rel="noopener noreferrer" href="/[slug]" as={`/${post.slug}`} className="text-2xl font-bold hover:underline">{post.data.title}</Link>
+                <Link rel="noopener noreferrer" href="/[slug]" as={`/${post.slug}`} className="text-2xl font-bold transition duration-200 bg-black bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500">{post.data.title}</Link>
                 <p className="mt-2 overflow-hidden line-clamp-3">{post.data.desc}</p>
               </div>
             </div>
@@ -102,8 +102,8 @@ const Index = (props) => {
       <br />
       <div className="flex">
         <input type="text" placeholder="Search tags..." value={searchQuery} onChange={handleSearchInput} className="flex-grow h-10 px-5 pr-16 text-sm bg-white border-2 border-gray-300 rounded-lg focus:border-violet-500 focus:outline-none" />
-        <button className='px-2 py-1 ml-2 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500' onClick={handleSearchSubmit}>Search</button>
-        <button className='px-2 py-1 ml-2 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500' onClick={goToRandomPost}><Dice5 size={30} /></button>
+        <button className='px-2 py-1 ml-2 text-lg font-semibold text-white transition duration-200 rounded-md shadow-lg bg-violet-500 hover:bg-pink-500' onClick={handleSearchSubmit}>Search</button>
+        <button className='px-2 py-1 ml-2 text-lg font-semibold text-white transition duration-200 rounded-md shadow-lg bg-violet-500 hover:bg-pink-500' onClick={goToRandomPost}><Dice5 size={30} /></button>
       </div>
       {handleSearchSubmit()}
     </div>
