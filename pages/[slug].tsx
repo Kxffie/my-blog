@@ -16,6 +16,8 @@ const Post = (props) => {
 				<meta content={props.post.slug} property="og:url" />
 				<meta content="https://aidevblog.vercel.app/favicon.jpg" property="og:image" />
 				<meta content="#8B5CF6" data-react-helmet="true" name="theme-color" />
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism.css" />
+				<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/prism.min.js"></script>
 			</Head>
 			<GoBackButton />
 

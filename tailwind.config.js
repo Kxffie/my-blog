@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       objectPosition: {
         'center-bottom': 'center bottom',
-      }
+      },
     },
   },
   variants: {

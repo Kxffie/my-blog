@@ -35,7 +35,7 @@ const Index = (props) => {
       );
     }
 
-    const itemsPerPage = 5;
+    const itemsPerPage = 10;
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const currentPagePosts = filteredPosts.slice(startIndex, endIndex);
@@ -52,8 +52,8 @@ const Index = (props) => {
           <meta name="twitter:card" content="https://aidevblog.vercel.app/favicon.jpg"></meta>
           <meta content="#8B5CF6" data-react-helmet="true" name="theme-color" />
         </Head>
-        <h1 className='px-2 py-1 my-2 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500'>
-          {currentPagePosts.length} Results •
+        <h1 className='flex justify-between px-2 py-1 my-2 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500'>
+          {currentPagePosts.length} Results • {props.posts.length} Posts
           <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value)} className='bg-violet-500 active:border-none focus:outline-none hover:cursor-pointer'>
             <option value="asc" className='hover:cursor-pointer'>Oldest to Newest</option>
             <option value="desc" className='hover:cursor-pointer'>Newest to Oldest</option>
@@ -85,7 +85,7 @@ const Index = (props) => {
             <ChevronRight size={36} />
           </button>
         </div>
-      </div>
+      </div >
     );
   };
 
