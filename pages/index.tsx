@@ -72,7 +72,7 @@ const Index = (props) => {
                 </span>
               </div>
               <div className="mt-3">
-                <Link rel="noopener noreferrer" href="/[slug]" as={`/${post.slug}`} className="text-2xl font-bold transition duration-200 ease-in-out bg-black bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500">{post.data.title}</Link>
+                <Link rel="noopener noreferrer" href="/[slug]" as={`/${post.slug}`} className="text-2xl font-bold transition ease-in-out bg-black bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500">{post.data.title}</Link>
                 <p className="mt-2 overflow-hidden line-clamp-3">{post.data.desc}</p>
               </div>
             </div>
