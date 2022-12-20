@@ -60,11 +60,12 @@ const Index = (props) => {
             <option value="desc" className='hover:cursor-pointer'>Newest to Oldest</option>
           </select>
         </h1>
+
         {currentPagePosts.map((post) => (
           <div key={post.slug} className="text-black" >
             <div className="container max-w-3xl px-10 py-6 mx-auto mb-3 bg-white rounded-lg shadow-xl ">
               <div className="flex items-center justify-between ">
-                <span className="text-sm dark:text-gray-400">{post.data.date} • {post.data.readTime}</span>
+                <span className="text-sm text-gray-400">{post.data.date} • {post.data.readTime}</span>
                 <span className="px-2 py-1 font-bold rounded">
                   {post.data.tags.map((tag) => (
                     <div key={post.slug.tag} className="hidden px-2 py-1 ml-1 text-sm font-semibold text-white rounded-md shadow-lg md:inline-block bg-violet-500">{tag}</div>
@@ -81,21 +82,21 @@ const Index = (props) => {
         <div className="flex justify-between mx-2 mt-6">
           <div>
             {/* First Page */}
-            <button onClick={() => setPage(1)} disabled={page === 1} className='px-2 py-1 mr-3 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500 disabled:bg-gray-500 disabled:text-gray-400'>
+            <button onClick={() => setPage(1)} disabled={page === 1} className='px-2 py-1 mr-3 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500 disabled:bg-gray-300 disabled:text-gray-400'>
               <FiChevronsLeft size={36} />
             </button>
             {/* Last Page */}
-            <button onClick={() => setPage(page - 1)} disabled={page === 1} className='px-2 py-1 mr-3 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500 disabled:bg-gray-500 disabled:text-gray-400'>
+            <button onClick={() => setPage(page - 1)} disabled={page === 1} className='px-2 py-1 mr-3 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500 disabled:bg-gray-300 disabled:text-gray-400'>
               <FiChevronLeft size={36} />
             </button>
           </div>
           <div>
             {/* Next Page */}
-            <button onClick={() => setPage(page + 1)} disabled={page * itemsPerPage >= filteredPosts.length} className='px-2 py-1 ml-3 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500 disabled:bg-gray-500 disabled:text-gray-400'>
+            <button onClick={() => setPage(page + 1)} disabled={page * itemsPerPage >= filteredPosts.length} className='px-2 py-1 ml-3 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500 disabled:bg-gray-300 disabled:text-gray-400'>
               <FiChevronRight size={36} />
             </button>
             {/* Last Page */}
-            <button onClick={() => setPage(Math.ceil(filteredPosts.length / itemsPerPage))} disabled={page * itemsPerPage >= filteredPosts.length} className='px-2 py-1 ml-3 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500 disabled:bg-gray-500 disabled:text-gray-400'>
+            <button onClick={() => setPage(Math.ceil(filteredPosts.length / itemsPerPage))} disabled={page * itemsPerPage >= filteredPosts.length} className='px-2 py-1 ml-3 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500 disabled:bg-gray-300 disabled:text-gray-400'>
               <FiChevronsRight size={36} />
             </button>
           </div>
@@ -126,8 +127,22 @@ const Index = (props) => {
 };
 
 export async function getStaticProps() {
-  const postsDirectory = path.join(process.cwd(), 'posts');
+  const postsDirectory = path.join(process.cwd(), 'posts/blogs');
+  const newsDirectory = path.join(process.cwd(), 'posts/blogs');
   const filenames = fs.readdirSync(postsDirectory);
+  const filenamesNews = fs.readdirSync(newsDirectory);
+
+  const news = filenamesNews.map((filename) => {
+    const filePath = path.join(newsDirectory, filename);
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    const { data, content } = matter(fileContent);
+    return {
+      slug: filename.replace('.md', ''),
+      data,
+      content,
+    };
+  });
+
   const posts = filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
     const fileContent = fs.readFileSync(filePath, 'utf8');
@@ -138,9 +153,11 @@ export async function getStaticProps() {
       content,
     };
   });
+
   return {
     props: {
       posts,
+      news,
     },
   };
 }

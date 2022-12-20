@@ -34,7 +34,7 @@ const Post = (props) => {
 };
 
 export async function getStaticPaths() {
-	const postsDirectory = path.join(process.cwd(), 'posts');
+	const postsDirectory = path.join(process.cwd(), 'posts/blogs');
 	const filenames = fs.readdirSync(postsDirectory);
 
 	return {
@@ -48,7 +48,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const postsDirectory = path.join(process.cwd(), 'posts');
+	const postsDirectory = path.join(process.cwd(), 'posts/blogs');
 	const filePath = path.join(postsDirectory, `${params.slug}.md`);
 	const fileContent = fs.readFileSync(filePath, 'utf8');
 	const { data, content } = matter(fileContent);
