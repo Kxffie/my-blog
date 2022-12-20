@@ -18,9 +18,9 @@ const Index = (props) => {
   const sortPosts = (order) => {
     return props.posts.sort((a, b) => {
       if (order === 'asc') {
-        return new Date(a.data.date) - new Date(b.data.date);
+        return new Date(a.data.date).getTime() - new Date(b.data.date).getTime();
       } else {
-        return new Date(b.data.date) - new Date(a.data.date);
+        return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
       }
     });
   }
