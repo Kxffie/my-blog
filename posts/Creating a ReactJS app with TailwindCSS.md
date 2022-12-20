@@ -1,5 +1,5 @@
 ---
-title: "Creating a ReactJS app with TailwindCSS app"
+title: "Creating a ReactJS app with TailwindCSS"
 desc: "TailwindCSS with ReactJS is a combination of two powerful technologies that allow developers to create fast, modern web applications. TailwindCSS provides a highly customizable CSS framework that allows developers to create a unique look and feel for their website or application while ReactJS provides the underlying architecture for building dynamic, user-interactive web applications. Together, these two technologies provide a complete solution for creating modern web applications."
 date: "12/19/2022"
 readTime: "5-10 Min"

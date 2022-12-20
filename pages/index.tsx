@@ -61,7 +61,7 @@ const Index = (props) => {
         </h1>
         {currentPagePosts.map((post) => (
           <div key={post.slug} className="text-black" >
-            <div className="container max-w-2xl px-10 py-6 mx-auto mb-3 bg-white rounded-lg shadow-xl ">
+            <div className="container max-w-3xl px-10 py-6 mx-auto mb-3 bg-white rounded-lg shadow-xl ">
               <div className="flex items-center justify-between ">
                 <span className="text-sm dark:text-gray-400">{post.data.date} • {post.data.readTime}</span>
                 <span className="px-2 py-1 font-bold rounded">
