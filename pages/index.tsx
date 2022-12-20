@@ -98,12 +98,12 @@ const Index = (props) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-3xl mx-auto">
       <br />
       <div className="flex">
         <input type="text" placeholder="Search tags..." value={searchQuery} onChange={handleSearchInput} className="flex-grow h-10 px-5 pr-16 text-sm bg-white border-2 border-gray-300 rounded-lg focus:border-violet-500 focus:outline-none" />
-        <button className='px-2 py-1 ml-2 text-lg font-semibold text-white transition duration-200 rounded-md shadow-lg bg-violet-500 hover:bg-pink-500' onClick={handleSearchSubmit}>Search</button>
-        <button className='px-2 py-1 ml-2 text-lg font-semibold text-white transition duration-200 rounded-md shadow-lg bg-violet-500 hover:bg-pink-500' onClick={goToRandomPost}><Dice5 size={30} /></button>
+        <button className='px-2 py-1 ml-2 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500' onClick={handleSearchSubmit}>Search</button>
+        <button className='px-2 py-1 ml-2 text-lg font-semibold text-white rounded-md shadow-lg bg-violet-500' onClick={goToRandomPost}><Dice5 size={30} /></button>
       </div>
       {handleSearchSubmit()}
     </div>

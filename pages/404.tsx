@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function About() {
 	return (
-		<div className='flex items-center justify-center h-screen'>
+		<div className='flex items-center justify-center h-screen '>
 			<Head>
 				<title>AIDevBlog - 404</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -14,7 +14,7 @@ export default function About() {
 				<meta name="twitter:card" content="https://aidevblog.vercel.app/favicon.jpg"></meta>
 				<meta content="#8B5CF6" data-react-helmet="true" name="theme-color" />
 			</Head>
-			<div className="flex items-center w-screen h-screen">
+			<div className="flex items-center h-screen">
 				<div className="container flex flex-col items-center justify-center mx-auto text-black md:flex-row">
 					<div className="max-w-md">
 						<div className="text-5xl font-bold font-dark text-violet-500">HTTP 404</div>

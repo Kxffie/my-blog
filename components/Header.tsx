@@ -4,7 +4,7 @@ import { Info } from 'akar-icons';
 
 const Header = () => (
 	<div className='py-3 bg-violet-500 '>
-		<header className="flex items-center justify-between max-w-2xl mx-auto">
+		<header className="flex items-center justify-between max-w-3xl mx-auto">
 			<div className="flex items-center">
 				<Image width="500" height="500" src="/favicon.jpg" alt="Logo" className="w-10 h-10 rounded-full" />
 				<Link legacyBehavior href="/">
