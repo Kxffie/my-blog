@@ -14,13 +14,13 @@ export default function About() {
 				<meta name="twitter:card" content="https://aidevblog.vercel.app/favicon.jpg"></meta>
 				<meta content="#8B5CF6" data-react-helmet="true" name="theme-color" />
 			</Head>
-			<div class="h-screen w-screen flex items-center">
-				<div class="container flex flex-col md:flex-row items-center justify-center text-black mx-auto">
-					<div class="max-w-md">
-						<div class="text-5xl font-dark font-bold text-violet-500">HTTP 404</div>
-						<p class="text-2xl md:text-3xl font-light leading-normal">Sorry we couldn&apos;t find this page. </p>
-						<p class="mb-8">But dont worry, you can find plenty of other things on our homepage.</p>
-						<Link href="/" class="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-violet-500">Back to Homepage</Link>
+			<div className="flex items-center w-screen h-screen">
+				<div className="container flex flex-col items-center justify-center mx-auto text-black md:flex-row">
+					<div className="max-w-md">
+						<div className="text-5xl font-bold font-dark text-violet-500">HTTP 404</div>
+						<p className="text-2xl font-light leading-normal md:text-3xl">Sorry we couldn&apos;t find this page. </p>
+						<p className="mb-8">But dont worry, you can find plenty of other things on our homepage.</p>
+						<Link href="/" className="inline px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 border border-transparent rounded-lg shadow focus:outline-none focus:shadow-outline-blue bg-violet-500">Back to Homepage</Link>
 					</div>
 				</div>
 			</div>

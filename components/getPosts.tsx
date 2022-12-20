@@ -1,5 +1,5 @@
-const glob = require('glob')
-const matter = require('gray-matter')
+import glob from 'glob'
+import matter from 'gray-matter'
 
 const getPosts = () => {
 	const posts = glob
